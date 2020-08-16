@@ -1,0 +1,36 @@
+package assignment;
+
+import java.util.Scanner;
+class Rectangle
+{
+    int h,w;
+
+    public void display()
+    {
+        System.out.println("Width:" + w +" "+ "Height:" + h);
+    }
+}
+class RectangleArea extends Rectangle
+{
+    public void read_input() 
+    {
+        Scanner sc = new Scanner(System.in);
+        w = sc.nextInt();
+        h = sc.nextInt();
+        sc.close();
+    }
+    public void display() 
+    {
+    	super.display();
+        System.out.println( "Area:" + w*h);
+    }
+}
+public class area 
+{
+    public static void main(String[] args) 
+    {
+        RectangleArea rectangleArea = new RectangleArea();
+        rectangleArea.read_input();
+        rectangleArea.display();
+    }
+}
